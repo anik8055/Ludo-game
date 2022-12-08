@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDO GAME</title>
+</head>
+<body>
+    <header>
+        <h1>LUDO GAME</h1>
+        <a href="#board">Click Here To Play</a>
+    </header>
+    
+    <div class="board" id="board">
+        <div class="lockerA">
+           <button class="butA" onclick="token('A')"><div class="locker">Locker for A</div><p class="nopinA">2 A</p></button>
+           
+        </div>
+        
+        <div class="table">
+            <div class="item startA"><button class="but" onclick="turn(1,15)"><p class="A B A1 B15"></p></button></div>         <!-- safe square -->
+            <div class="item"><button class="but" onclick="turn(2,16)"><p class="A B A2 B16"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(3,17)"><p class="A B A3 B17"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(4,18)"><p class="A B A4 B18"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(5,19)"><p class="A B A5 B19"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(6,20)"><p class="A B A6 B20"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(7,21)"><p class="A B A7 B21"></p></button></div>
+            <div class="item safe"><button class="but" onclick="turn(8,22)"><p class="A B A8 B22"></p></button></div>          <!-- safe square -->
+            <div class="item overA"><button class="but" onclick="turn(28,14)"><p class="A B A28 B14"></p></button></div>
+            <div class="item"></div>
+            <div class="item"><button class="but" onclick="turn(9, 23)"><p class="A B A9 B23"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(27, 13)"><p class="A B A27 B13"></p></button></div>
+            <div class="item"></div>
+            <div class="item"><button class="but" onclick="turn(10, 24)"><p class="A B A10 B24"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(26, 12)"><p class="A B A26 B12"></p></button></div>
+            <div class="item nturn">Next Turn: Player <span>A</span></div>
+            <div class="item"><button class="but" onclick="turn(11, 25)"><p class="A B A11 B25"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(25, 11)"><p class="A B A25 B11"></p></button></div>
+            <div class="item"><button class="butrol" onclick="roll()">ROLL!</button></div>
+            <div class="item"><button class="but" onclick="turn(12, 26)"><p class="A B A12 B26"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(24, 10)"><p class="A B A24 B10"></p></button></div>
+            <div class="item rolled">Rolled: </div>
+            <div class="item"><button class="but" onclick="turn(13, 27)"><p class="A B A13 B27"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(23, 9)"><p class="A B A23 B9"></p></button></div>
+            <div class="item"></div>
+            <div class="item overB"><button class="but" onclick="turn(14, 26)"><p class="A B A14 B28"></p></button></div>
+            <div class="item safe"><button class="but" onclick="turn(22, 8)"><p class="A B A22 B8"></p></button></div>         <!-- safe square -->
+            <div class="item"><button class="but" onclick="turn(21, 7)"><p class="A B A21 B7"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(20, 6)"><p class="A B A20 B6"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(19, 5)"><p class="A B A19 B5"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(18, 4)"><p class="A B A18 B4"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(17, 3)"><p class="A B A17 B3"></p></button></div>
+            <div class="item"><button class="but" onclick="turn(16, 2)"><p class="A B A16 B2"></p></button></div>
+            <div class="item startB"><button class="but" onclick="turn(15, 1)"><p class="A B A15 B1"></p></button></div>      <!-- safe square -->
+        </div>
+
+        <div class="lockerB">            
+            <button class="butB" onclick="token('B')"><p class="nopinB">2 B</p><div class="locker">Locker for B</div></button>
+        </div>
+
+        <div class="home">
+            <button class="reset" onclick="window.location.reload();">Reset Game</button>
+            <div class="container">
+                <div class="itemh itemhome">HOME</div>
+                <div class="itemh itemA">A: <span></span></div>
+                <div class="itemh itemB">B: <span></span></div>
+            </div>
+            <div class="winner winnerh">Winner is </div>
+            <div class="winner winnerp" ></div>
+        </div>
+        
+    </div>
+
+    <script src="sandbox.js"></script>
+
+</body>
+</html>
